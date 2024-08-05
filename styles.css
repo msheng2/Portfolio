@@ -14,6 +14,37 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
+    overflow: hidden; /* Prevent scrolling */
+    position: relative; /* Make sure body is positioned relative for absolute children */
+}
+
+/* Gradient background styling */
+.gradient-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #9acbff,#7fa8d4);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    z-index: 0;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Canvas styling */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 /* Container styling */
@@ -25,13 +56,22 @@ body {
     text-align: center;
     width: 100%;
     max-width: 800px;
+    position: relative;
+    z-index: 2; /* Ensure container is above background and canvas */
 }
 
 /* Heading styling */
 h1 {
-    color: #333;
+    color: #9acbff;
     margin-bottom: 1em;
     font-size: 2em;
+}
+
+/* Heading h2 styling */
+h2 {
+    color: #9acbff;
+    margin-bottom: 1em;
+    font-size: 1.5em;
 }
 
 /* List styling */
@@ -115,16 +155,16 @@ video {
         font-size: 2.5em;
     }
 
+    h2 {
+        font-size: 2em;
+    }
+
     .image-gallery img {
         max-width: 250px; /* Adjust for tablets and medium screens */
     }
 
     .link-list a {
         font-size: 1.5em;
-    }
-
-    h2 {
-        font-size: 2em; /* Larger font size on larger screens */
     }
 }
 
@@ -137,20 +177,19 @@ video {
         font-size: 3em;
     }
 
-    .link-list a {
-        font-size: 1.8em;
-    }
-
-    .image-gallery img{
-        max-width: 250px;
-
-    }
-    .gif-gallery img {
-        max-width: 500px;
-    }
-
     h2 {
         font-size: 2.5em; /* Even larger font size on very large screens */
     }
 
+    .image-gallery img {
+        max-width: 250px;
+    }
+
+    .gif-gallery img {
+        max-width: 500px;
+    }
+
+    .link-list a {
+        font-size: 1.8em;
+    }
 }
