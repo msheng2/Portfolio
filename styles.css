@@ -1,0 +1,156 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container styling */
+.container {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Heading styling */
+h1 {
+    color: #333;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+/* List styling */
+.link-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.link-list li {
+    margin: 1em 0;
+}
+
+/* Link styling */
+.link-list a {
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.link-list a:hover {
+    color: #004499;
+}
+
+/* Image gallery styling */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.image-gallery img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* GIF gallery styling */
+.gif-gallery {
+    margin-top: 20px;
+}
+
+.gif-gallery img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Video gallery styling */
+.video-gallery {
+    margin-top: 20px;
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Text description styling */
+.text-description {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Responsive design using media queries */
+@media (min-width: 768px) {
+    .container {
+        padding: 3em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .image-gallery img {
+        max-width: 250px; /* Adjust for tablets and medium screens */
+    }
+
+    .link-list a {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 2em; /* Larger font size on larger screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 4em;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .link-list a {
+        font-size: 1.8em;
+    }
+
+    .image-gallery img{
+        max-width: 250px;
+
+    }
+    .gif-gallery img {
+        max-width: 500px;
+    }
+
+    h2 {
+        font-size: 2.5em; /* Even larger font size on very large screens */
+    }
+
+}
